@@ -1,5 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+import inobounce from 'inobounce'
 
 function App() {
   const [height, setHeight] = useState(0)
@@ -16,6 +17,13 @@ function App() {
     <div className="App">
       <div className='block red'>
 
+        <button onClick={() => {
+          inobounce.enable()
+        }}>inobounce.enable</button>
+
+        <button onClick={() => {
+          inobounce.disable()
+        }}>inobounce.disable</button>
       </div>
       <div className='block blue'>
 
